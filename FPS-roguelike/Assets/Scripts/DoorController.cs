@@ -3,8 +3,8 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public float rotationSpeed = 2.0f; // Скорость вращения
-    public float viewAngle = 30.0f; 
-    private bool isOpen = false; // Состояние двери
+    public float viewAngle = 60.0f; 
+    public bool isOpen = false; // Состояние двери
     private bool playerInside = false; // Игрок внутри двери
     private Quaternion closedRotation; // Закрытое положение
     private Quaternion openRotation; // Открытое положение
@@ -79,13 +79,11 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Close()
     {
-        if (other.CompareTag("Player") && isOpen)
-        {
-            playerInside = true; // Игрок зашёл за дверь
-            isOpen = false; // Закрыть дверь при входе
-            audioSource.PlayOneShot(closeSound);
-        }
+        print(1);
+        playerInside = true; // Игрок зашёл за дверь
+        isOpen = false; // Закрыть дверь при входе
+        audioSource.PlayOneShot(closeSound);
     }
 }
