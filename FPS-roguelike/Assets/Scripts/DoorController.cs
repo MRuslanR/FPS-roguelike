@@ -14,11 +14,18 @@ public class DoorController : MonoBehaviour
     public AudioClip closeSound; // Звук закрытия двери
 
     public AudioClip closedSound; // Звук запертой двери
+
+
+    private BlockStorage Manager;
+    private bool isCreated = false;
+
     private void Start()
     {
         closedRotation = transform.rotation; // Сохраняем начальное положение двери
         openRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, -90, 0)); // Определяем открытое положение
         audioSource = GetComponent<AudioSource>(); // Получаем компонент AudioSource
+        Manager = FindObjectOfType<BlockStorage>();
+        isOpen = false;
     }
 
     private void Update()
@@ -42,6 +49,10 @@ public class DoorController : MonoBehaviour
         // Плавно поворачиваем дверь
         if (isOpen)
         {
+            if (!isCreated){
+                isCreated = true;
+                Manager.GenerateBlock();
+            }
             transform.rotation = Quaternion.Slerp(transform.rotation, openRotation, Time.deltaTime * rotationSpeed);
         }
         else
@@ -81,7 +92,7 @@ public class DoorController : MonoBehaviour
 
     public void Close()
     {
-        print(1);
+        Manager.RemoveOldestBlock();
         playerInside = true; // Игрок зашёл за дверь
         isOpen = false; // Закрыть дверь при входе
         audioSource.PlayOneShot(closeSound);
