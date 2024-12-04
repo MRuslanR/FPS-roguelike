@@ -11,8 +11,9 @@ public class DoorCollision : MonoBehaviour
     
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") && child.isOpen)
+        if (other.CompareTag("Player") && !child.playerInside)
         {   
+            child.playerInside = true;
             child.Close();
         }
     }

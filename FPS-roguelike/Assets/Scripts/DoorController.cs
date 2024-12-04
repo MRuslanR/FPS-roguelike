@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public float rotationSpeed = 2.0f; // Скорость вращения
+    public float rotationSpeed = 10f; // Скорость вращения
     public float viewAngle = 60.0f; 
     public bool isOpen = false; // Состояние двери
-    private bool playerInside = false; // Игрок внутри двери
+    public bool playerInside = false; // Игрок внутри двери
     private Quaternion closedRotation; // Закрытое положение
     private Quaternion openRotation; // Открытое положение
 
@@ -17,7 +17,6 @@ public class DoorController : MonoBehaviour
 
 
     private BlockStorage Manager;
-    private bool isCreated = false;
 
     private void Start()
     {
@@ -35,7 +34,7 @@ public class DoorController : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
             if (IsPlayerLookingAtDoor(player) && distanceToPlayer <= 3.0f ){
-                if (!playerInside) // Проверяем расстояние и состояние двери
+                if (!playerInside) 
                 {
                     ToggleDoor();
                 }
@@ -49,10 +48,6 @@ public class DoorController : MonoBehaviour
         // Плавно поворачиваем дверь
         if (isOpen)
         {
-            if (!isCreated){
-                isCreated = true;
-                Manager.GenerateBlock();
-            }
             transform.rotation = Quaternion.Slerp(transform.rotation, openRotation, Time.deltaTime * rotationSpeed);
         }
         else
@@ -92,9 +87,12 @@ public class DoorController : MonoBehaviour
 
     public void Close()
     {
+        Manager.GenerateBlock();
         Manager.RemoveOldestBlock();
-        playerInside = true; // Игрок зашёл за дверь
+        rotationSpeed = 20f;
+        if (isOpen){
+            audioSource.PlayOneShot(closeSound);
+        }
         isOpen = false; // Закрыть дверь при входе
-        audioSource.PlayOneShot(closeSound);
     }
 }
