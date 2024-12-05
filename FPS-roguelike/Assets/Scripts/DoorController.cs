@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public float rotationSpeed = 2.0f; // Скорость вращения
+    public float rotationSpeed = 10f; // Скорость вращения
     public float viewAngle = 60.0f; 
     public bool isOpen = false; // Состояние двери
-    private bool playerInside = false; // Игрок внутри двери
+    public bool playerInside = false; // Игрок внутри двери
     private Quaternion closedRotation; // Закрытое положение
     private Quaternion openRotation; // Открытое положение
 
@@ -14,11 +14,17 @@ public class DoorController : MonoBehaviour
     public AudioClip closeSound; // Звук закрытия двери
 
     public AudioClip closedSound; // Звук запертой двери
+
+
+    private BlockStorage Manager;
+
     private void Start()
     {
         closedRotation = transform.rotation; // Сохраняем начальное положение двери
         openRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, -90, 0)); // Определяем открытое положение
         audioSource = GetComponent<AudioSource>(); // Получаем компонент AudioSource
+        Manager = FindObjectOfType<BlockStorage>();
+        isOpen = false;
     }
 
     private void Update()
@@ -28,7 +34,7 @@ public class DoorController : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
             if (IsPlayerLookingAtDoor(player) && distanceToPlayer <= 3.0f ){
-                if (!playerInside) // Проверяем расстояние и состояние двери
+                if (!playerInside) 
                 {
                     ToggleDoor();
                 }
@@ -81,9 +87,12 @@ public class DoorController : MonoBehaviour
 
     public void Close()
     {
-        print(1);
-        playerInside = true; // Игрок зашёл за дверь
+        Manager.GenerateBlock();
+        Manager.RemoveOldestBlock();
+        rotationSpeed = 20f;
+        if (isOpen){
+            audioSource.PlayOneShot(closeSound);
+        }
         isOpen = false; // Закрыть дверь при входе
-        audioSource.PlayOneShot(closeSound);
     }
 }
