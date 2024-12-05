@@ -6,21 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e053ffff-5bef-4c25-8c66-bcc9567828bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS-roguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS-roguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Effects/M_Flames.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Effects/M_Flames.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Effects/M_Smoke.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Effects/M_Smoke.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Demo_Lamps.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Demo_Lamps.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Demo_Props.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Demo_Props.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Explosives.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Explosives.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Cube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Cube.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Separator_Small.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Separator_Small.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Showcase_Cube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Showcase_Cube.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Wall_2x2.5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Wall_2x2.5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Wall_4x5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Art/Materials/Environment/M_Grid_Wall_4x5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Effects/Particles/P_LPSP_WEP_Flash_Light.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Effects/Particles/P_LPSP_WEP_Flash_Light.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Interface/P_LPSP_UI_Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Interface/P_LPSP_UI_Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/15 + 10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/15 + 10.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +15,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2pfFSON0vGiizYotkgvlWTV7DNa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +27,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "xmik",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733149258951</updated>
-      <workItem from="1733149281496" duration="2093000" />
+      <workItem from="1733149281496" duration="2800000" />
     </task>
     <servers />
   </component>
