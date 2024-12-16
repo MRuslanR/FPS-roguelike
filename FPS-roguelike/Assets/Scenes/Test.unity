@@ -150,6 +150,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 695466546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &217409373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6905704569429971344, guid: 55af6a60922234d93885d1d9014bdcb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040589259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &217409374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3961457707798232447, guid: 55af6a60922234d93885d1d9014bdcb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040589259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &217409375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217409373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04a2905bf4d550449ec3a2a1dafaf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 5129341420237770602, guid: da4239d9fa6436e4288490edbaca276f,
+    type: 3}
+  throwPoint: {fileID: 1300592177}
+  throwForce: 20
+  grenadeLifetime: 3
 --- !u!4 &695466546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3163719578385044841, guid: 975998b6c39014eec85defd5782b2825,
@@ -417,8 +446,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3961457707798232447, guid: 55af6a60922234d93885d1d9014bdcb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1300592177}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6905704569429971344, guid: 55af6a60922234d93885d1d9014bdcb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 217409375}
     - targetCorrespondingSourceObject: {fileID: 4670950487366647208, guid: 55af6a60922234d93885d1d9014bdcb3,
         type: 3}
       insertIndex: -1
@@ -474,6 +511,38 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1300592176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1300592177}
+  m_Layer: 9
+  m_Name: Throw_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1300592177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300592176}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000048875804, y: -0.0000006109472, z: -0.00000032782503,
+    w: 1}
+  m_LocalPosition: {x: 0.72, y: -0.1, z: 0}
+  m_LocalScale: {x: 0.20000002, y: 0.20000003, z: 0.20000006}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 217409374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136163827
 GameObject:
   m_ObjectHideFlags: 0

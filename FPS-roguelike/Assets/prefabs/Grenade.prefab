@@ -34,8 +34,8 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6827079195024947056}
   - {fileID: 3391182617974669488}
+  - {fileID: 6827079195024947056}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7343357353796655187
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 5
-  explosionForce: 700
+  explosionForce: 800
   enemyMask:
     serializedVersion: 2
     m_Bits: 0
@@ -200,32 +200,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.333333
+      value: 3.3333328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.333333
+      value: 3.3333328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.333333
+      value: 3.3333328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.422
+      value: 0.349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 0.499
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.026
+      value: -1.0260001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c967395cc9ec064c908b8a2ce416d5a,
         type: 3}

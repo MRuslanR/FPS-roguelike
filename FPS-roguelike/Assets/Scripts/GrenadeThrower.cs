@@ -11,7 +11,7 @@ public class GrenadeThrower : MonoBehaviour
     public float grenadeLifetime = 3f;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             ThrowGrenade();
         }
