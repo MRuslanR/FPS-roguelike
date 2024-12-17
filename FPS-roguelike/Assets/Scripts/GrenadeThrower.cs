@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using System.Xml. Serialization;
 using TMPro;
 
 public class GrenadeThrower : MonoBehaviour
@@ -13,6 +11,8 @@ public class GrenadeThrower : MonoBehaviour
     public float grenadeLifetime = 3f;
     public TextMeshProUGUI count;
     public int grenadeCount = 2;
+    public int maxGrenades = 5; // Максимальное количество гранат
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.G) && grenadeCount > 0)
@@ -27,6 +27,7 @@ public class GrenadeThrower : MonoBehaviour
     {
         count = GameObject.Find("Grenade_counter").GetComponent<TextMeshProUGUI>();
         count.text = grenadeCount.ToString();
+        StartCoroutine(AddGrenadePeriodically());
     }
 
     public void ThrowGrenade()
@@ -36,6 +37,7 @@ public class GrenadeThrower : MonoBehaviour
         rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
         StartCoroutine(ExplodeAfterDelay(grenade));
     }
+
     IEnumerator ExplodeAfterDelay(GameObject grenade)
     {
         yield return new WaitForSeconds(grenadeLifetime);
@@ -44,6 +46,19 @@ public class GrenadeThrower : MonoBehaviour
         {
             grenadeScript.Explode();
         }
-        // Destroy(grenade,0.5f);
+        Destroy(grenade,0.5f);
+    }
+
+    IEnumerator AddGrenadePeriodically()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+            if (grenadeCount < maxGrenades) // Добавляем гранаты только если их меньше максимального количества
+            {
+                grenadeCount++;
+                count.text = grenadeCount.ToString();
+            }
+        }
     }
 }

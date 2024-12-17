@@ -139,6 +139,13 @@ public class Projectile : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
+		
+		if (collision.transform.tag == "Enemy")
+		{
+			Enemy en = collision.gameObject.GetComponent<Enemy>();
+			en.Damage();
+			Destroy(gameObject);
+		}
 	}
 
 	private IEnumerator DestroyTimer () 

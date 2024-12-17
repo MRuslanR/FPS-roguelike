@@ -1,5 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 public class ExplosiveBarrelScript : MonoBehaviour {
 
@@ -43,58 +50,65 @@ public class ExplosiveBarrelScript : MonoBehaviour {
 			} 
 		}
 	}
+
+	public void Boom()
+	{
+		print("Boom");
+		explode = true;
+	}
 	
 	private IEnumerator Explode () {
-		//Wait for set amount of time
-		yield return new WaitForSeconds(randomTime);
+    //Wait for set amount of time
+    yield return new WaitForSeconds(randomTime);
 
-		//Spawn the destroyed barrel prefab
-		Instantiate (destroyedBarrelPrefab, transform.position, 
-		             transform.rotation); 
+    //Spawn the destroyed barrel prefab
+    Instantiate(destroyedBarrelPrefab, transform.position, transform.rotation); 
 
-		//Explosion force
-		Vector3 explosionPos = transform.position;
-		Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
-		foreach (Collider hit in colliders) {
-			Rigidbody rb = hit.GetComponent<Rigidbody> ();
-			
-			//Add force to nearby rigidbodies
-			if (rb != null)
-				rb.AddExplosionForce (explosionForce * 50, explosionPos, explosionRadius);
+    //Explosion force
+    Vector3 explosionPos = transform.position;
+    Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
+    foreach (Collider hit in colliders) {
+        Rigidbody rb = hit.GetComponent<Rigidbody>();
+        
+        //Add force to nearby rigidbodies
+        if (rb != null)
+            rb.AddExplosionForce(explosionForce * 50, explosionPos, explosionRadius);
 
-			//If the barrel explosion hits other barrels with the tag "ExplosiveBarrel"
-			if (hit.transform.tag == "ExplosiveBarrel") 
-			{
-				//Toggle the explode bool on the explosive barrel object
-				hit.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
-			}
-				
-			//If the explosion hit the tag "Target"
-			if (hit.transform.tag == "Target") 
-			{
-				//Toggle the isHit bool on the target object
-				hit.transform.gameObject.GetComponent<TargetScript>().isHit = true;
-			}
+        //If the barrel explosion hits other barrels with the tag "ExplosiveBarrel"
+        if (hit.transform.CompareTag("ExplosiveBarrel")) {
+            hit.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
+        }
+            
+        //If the explosion hit the tag "Target"
+        if (hit.transform.CompareTag("Target")) {
+            hit.transform.gameObject.GetComponent<TargetScript>().isHit = true;
+        }
 
-			//If the explosion hit the tag "GasTank"
-			if (hit.GetComponent<Collider>().tag == "GasTank") 
-			{
-				//If gas tank is within radius, explode it
-				hit.gameObject.GetComponent<GasTankScript> ().isHit = true;
-				hit.gameObject.GetComponent<GasTankScript> ().explosionTimer = 0.05f;
-			}
-		}
+        //If the explosion hit the tag "GasTank"
+        if (hit.CompareTag("GasTank")) {
+            hit.gameObject.GetComponent<GasTankScript>().isHit = true;
+            hit.gameObject.GetComponent<GasTankScript>().explosionTimer = 0.05f;
+        }
 
-		//Raycast downwards to check the ground tag
-		RaycastHit checkGround;
-		if (Physics.Raycast(transform.position, Vector3.down, out checkGround, 50))
-		{
-			//Instantiate explosion prefab at hit position
-			Instantiate (explosionPrefab, checkGround.point, 
-				Quaternion.FromToRotation (Vector3.forward, checkGround.normal)); 
-		}
+        // Check if the explosion hits the player
+        if (hit.CompareTag("Player")) {
+#if UNITY_EDITOR
+	        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        }
+    }
 
-		//Destroy the current barrel object
-		Destroy (gameObject);
-	}
+    //Raycast downwards to check the ground tag
+    RaycastHit checkGround;
+    if (Physics.Raycast(transform.position, Vector3.down, out checkGround, 50)) {
+        //Instantiate explosion prefab at hit position
+        Instantiate(explosionPrefab, checkGround.point, Quaternion.FromToRotation(Vector3.forward, checkGround.normal)); 
+    }
+
+    //Destroy the current barrel object
+    Destroy(gameObject);
+}
+
 }
