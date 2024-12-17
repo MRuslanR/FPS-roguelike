@@ -17,6 +17,7 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Exit
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Cover
   - 
   - Wall
   - First Person View

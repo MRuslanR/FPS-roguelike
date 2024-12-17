@@ -34,7 +34,7 @@ public class CasingScript : MonoBehaviour {
 	[Header("Spin Settings")]
 	//How fast the casing spins
 	[Tooltip("How fast the casing spins over time")]
-	public float speed = 2500.0f;
+	public float speed = 2.0f;
 
 	//Launch the casing at start
 	private void Awake () 
@@ -61,7 +61,7 @@ public class CasingScript : MonoBehaviour {
 		transform.rotation = Random.rotation;
 		//Start play sound coroutine
 		StartCoroutine (PlaySound ());
-	}
+    }
 
 	private void FixedUpdate () 
 	{
@@ -88,4 +88,22 @@ public class CasingScript : MonoBehaviour {
 		//Destroy casing object
 		Destroy (gameObject);
 	}
+    [SerializeField] private int bulletDamage = 5; //Урон пули
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.CompareTag("Player")) 
+        //{
+        //    //collision.gameObject.GetComponentInParent<HealthBar>().TakeDamage(bulletDamage);
+        //    //Destroy(gameObject);
+        //}
+        Debug.Log("Vystrel");
+        Debug.Log(collision);
+        if (collision.gameObject.CompareTag("Enemy")) 
+        {
+            Debug.Log("Popal");
+            collision.gameObject.GetComponent<Enemy52>().TakeDamage(bulletDamage);
+            Destroy(gameObject);
+        }
+    }
 }
