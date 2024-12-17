@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083531557108550504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 835975439577269774}
   - component: {fileID: 6387637338180139767}
   - component: {fileID: 221254088159953315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 2949372982423290912}
   - component: {fileID: 6789992450838077811}
   - component: {fileID: 3006225550167883983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,6 +241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2
+  viewAngle: 60
+  isOpen: 0
+  playerInside: 0
   openSound: {fileID: 8300000, guid: a4b7247f81c304e3786c592d46da8dbd, type: 3}
   closeSound: {fileID: 8300000, guid: 446aad89899b046b9bcd26791bf228f2, type: 3}
   closedSound: {fileID: 8300000, guid: 470ebd0c1aa0d454dbe0156e8ee0e691, type: 3}

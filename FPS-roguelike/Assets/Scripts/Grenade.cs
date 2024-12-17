@@ -12,19 +12,19 @@ public class Grenade : MonoBehaviour
     public LayerMask obstacleLayer;
     public UnityEvent onExplode;
     public UnityEvent<GameObject> onEnemyHit;
-    public float destroyDelay = 2f; // Добавлено для задержки уничтожения гранаты
+    public float destroyDelay = 2f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     public void Explode()
     {
         onExplode.Invoke();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius, enemyMask);
-        List<GameObject> hitEnemies = new List<GameObject>(); // Для избежания повторного нанесения урона
+        List<GameObject> hitEnemies = new List<GameObject>(); // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
         foreach (var hitCollider in hitColliders)
         {
             if (hitEnemies.Contains(hitCollider.gameObject))
             {
-                continue; // Проверка на то, чтобы не бить 2 раза
+                continue; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅ
             }
             hitEnemies.Add(hitCollider.gameObject);
 
@@ -33,20 +33,20 @@ public class Grenade : MonoBehaviour
 
             if (Physics.Raycast(transform.position, directionToEnemy, out hit, explosionRadius, obstacleLayer))
             {
-                Debug.Log("ПРЕПЯТСТВИЕ МЕШАЕТ :(");
+                Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ :(");
                 continue;
             }
 
-            Debug.Log("Bpar поражен: " + hitCollider.gameObject.name);
+            Debug.Log("Bpar пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + hitCollider.gameObject.name);
             onEnemyHit.Invoke(hitCollider.gameObject);
 
             Rigidbody enemyRigidbody = hitCollider.GetComponent<Rigidbody>();
             if (enemyRigidbody != null)
             {
                 enemyRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
-                Destroy(hitCollider);
+                Destroy(hitCollider.gameObject);
             }
         }
-        Destroy(gameObject, destroyDelay); // Уничтожение гранаты после обработки всех целей
+        Destroy(gameObject, destroyDelay); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     }
 }
