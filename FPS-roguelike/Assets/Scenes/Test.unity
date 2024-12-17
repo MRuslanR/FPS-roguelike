@@ -315,6 +315,9 @@ MonoBehaviour:
   throwPoint: {fileID: 1300592177}
   throwForce: 20
   grenadeLifetime: 3
+  count: {fileID: 0}
+  grenadeCount: 2
+  maxGrenades: 5
 --- !u!1 &539821559
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,12 +673,12 @@ PrefabInstance:
     - target: {fileID: 5683948516933070360, guid: 55af6a60922234d93885d1d9014bdcb3,
         type: 3}
       propertyPath: sensitivity.x
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5683948516933070360, guid: 55af6a60922234d93885d1d9014bdcb3,
         type: 3}
       propertyPath: sensitivity.y
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6137980104690627704, guid: 55af6a60922234d93885d1d9014bdcb3,
         type: 3}

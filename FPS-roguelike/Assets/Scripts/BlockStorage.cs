@@ -9,6 +9,8 @@ public class BlockStorage : MonoBehaviour
     private GameObject currentBlock;
     private Transform exit; // Ссылка на компонент Exit
     private int lastInd = -1;
+    public int cur_level = 0;
+
 
     private void Start()
     {
@@ -18,6 +20,7 @@ public class BlockStorage : MonoBehaviour
 
     public void GenerateBlock(bool start = false)
     {
+        cur_level += 1;
         int randomIndex;
         if (start){
             randomIndex = 4;
