@@ -53,7 +53,7 @@ public class GrenadeThrower : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(30f);
             if (grenadeCount < maxGrenades) // Добавляем гранаты только если их меньше максимального количества
             {
                 grenadeCount++;

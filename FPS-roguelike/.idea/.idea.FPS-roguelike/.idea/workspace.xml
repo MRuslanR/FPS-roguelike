@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e053ffff-5bef-4c25-8c66-bcc9567828bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS-roguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS-roguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyRobots/Scenes/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyRobots/Scenes/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/ExplosiveBarrelScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/ExplosiveBarrelScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Code/Legacy/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Damageables/P_LPSP_DMG_Barrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Damageables/P_LPSP_DMG_Barrel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Grid_Doorway.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Grid_Doorway.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Bullets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Bullets.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Material.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Material.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_VFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_VFX.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/Demo/P_Showcase_Weapon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/P_LPSP_FP_CH.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/P_LPSP_FP_CH.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/P_LPSP_PP.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Prefabs/P_LPSP_PP.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Phoenix3D/Demo/Prefabs/CanvasChangeMaterials.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Phoenix3D/Demo/Prefabs/CanvasChangeMaterials.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Phoenix3D/Demo/Scenes/Phoenix3D_Materials.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Phoenix3D/Demo/Scenes/Phoenix3D_Materials.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pause.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Pause.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grenade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grenade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GrenadeThrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GrenadeThrower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/CannonMachine Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/CannonMachine Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/P_LPSP_FP_CH Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/P_LPSP_FP_CH Variant.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
