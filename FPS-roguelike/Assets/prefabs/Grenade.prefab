@@ -125,13 +125,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 5
-  explosionForce: 800
+  explosionForce: 10
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65536
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   onExplode:
     m_PersistentCalls:
       m_Calls:
@@ -162,6 +162,7 @@ MonoBehaviour:
   onEnemyHit:
     m_PersistentCalls:
       m_Calls: []
+  destroyDelay: 2
 --- !u!54 &1370987056071762582
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1

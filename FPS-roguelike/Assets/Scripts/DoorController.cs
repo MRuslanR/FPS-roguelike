@@ -84,7 +84,7 @@ public class DoorController : MonoBehaviour
             audioSource.PlayOneShot(closeSound); // Воспроизводим звук закрытия двери
         }
     }
-
+    
     public void Close()
     {
         Manager.GenerateBlock();

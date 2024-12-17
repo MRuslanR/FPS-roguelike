@@ -4,39 +4,49 @@ using Unity.VisualScripting;
 using UnityEngine.Events;
 using UnityEngine;
 
-
 public class Grenade : MonoBehaviour
 {
-
     public float explosionRadius = 5f;
     public float explosionForce = 700f;
     public LayerMask enemyMask;
     public LayerMask obstacleLayer;
     public UnityEvent onExplode;
     public UnityEvent<GameObject> onEnemyHit;
+    public float destroyDelay = 2f; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
     public void Explode()
     {
         onExplode.Invoke();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius, enemyMask);
+        List<GameObject> hitEnemies = new List<GameObject>(); // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+
         foreach (var hitCollider in hitColliders)
         {
+            if (hitEnemies.Contains(hitCollider.gameObject))
+            {
+                continue; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 2 ï¿½ï¿½ï¿½ï¿½
+            }
+            hitEnemies.Add(hitCollider.gameObject);
+
             Vector3 directionToEnemy = (hitCollider.transform.position - transform.position).normalized;
             RaycastHit hit;
+
             if (Physics.Raycast(transform.position, directionToEnemy, out hit, explosionRadius, obstacleLayer))
             {
-                Debug.Log("ÏÐÅÏßÒÑÒÂÈÅ ÌÅØÀÅÒ :(");
+                Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :(");
                 continue;
             }
-            Debug.Log("Bpar ïîðàæåí: " + hitCollider.gameObject.name);
+
+            Debug.Log("Bpar ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + hitCollider.gameObject.name);
             onEnemyHit.Invoke(hitCollider.gameObject);
 
             Rigidbody enemyRigidbody = hitCollider.GetComponent<Rigidbody>();
-
             if (enemyRigidbody != null)
             {
                 enemyRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                Destroy(hitCollider.gameObject);
             }
-            Destroy(gameObject, 2f);
         }
+        Destroy(gameObject, destroyDelay); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     }
-};
+}
