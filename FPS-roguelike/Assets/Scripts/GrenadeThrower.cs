@@ -32,6 +32,6 @@ public class GrenadeThrower : MonoBehaviour
         {
             grenadeScript.Explode();
         }
-        Destroy(grenade,0.5f);
+        // Destroy(grenade,0.5f);
     }
 }
